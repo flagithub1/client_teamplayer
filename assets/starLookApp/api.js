@@ -2,9 +2,9 @@
 const config = require('../config')
 const store = require('../store')
 
-const indexStarLookApp = function (data) {
+const indexTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/indexStarLookApp',
+    url: config.apiUrl + '/indexTeam',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -12,9 +12,10 @@ const indexStarLookApp = function (data) {
     data: data
   })
 }
-const showStarLookApp = function (data) {
+
+const showTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/showStarLookApp',
+    url: config.apiUrl + '/showTeam',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -22,9 +23,9 @@ const showStarLookApp = function (data) {
     data: data
   })
 }
-const createStarLookApp = function (data) {
+const createTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/createStarLookApp',
+    url: config.apiUrl + '/createTeam',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -32,9 +33,9 @@ const createStarLookApp = function (data) {
     data: data
   })
 }
-const updateStarLookApp = function (data) {
+const updateTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/updateStarLookApp',
+    url: config.apiUrl + '/updateTeam',
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -42,9 +43,9 @@ const updateStarLookApp = function (data) {
     data: data
   })
 }
-const deleteStarLookpp = function (data) {
+const deleteTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/destroyStarLookApp',
+    url: config.apiUrl + '/destroyTeam',
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -54,9 +55,9 @@ const deleteStarLookpp = function (data) {
 }
 
 module.exports = {
-  index,
-  create,
-  show,
-  update,
-  delete
+  indexTeam,
+  createTeam,
+  showTeam,
+  updateTeam,
+  deleteTeam
 }

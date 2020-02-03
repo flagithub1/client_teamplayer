@@ -1,0 +1,25 @@
+{{#each teams as |team|}}
+  {{log team}}
+  <section data-id="{{team.id}}">
+    <h6>Name:</h6>
+    <h3>
+      {{team.name}}
+    </h3>
+    <h6>Location:</h6>
+    <h3>
+    {{team.location}}
+  </h3>
+  <h6>Slogan:</h6>
+  <h3>
+    {{team.slogan}}
+    <p>
+      {{#if team.user}}
+        {{team.user}}
+      {{else}}
+        No user provided.
+      {{/if}}
+    </p>
+     {{> partial team=team }}
+  </section>
+
+{{/each}}

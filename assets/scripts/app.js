@@ -1,14 +1,16 @@
 'use strict'
+const loginEvents = require('./loginActions/events.js')
 
 // use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-// const auth = require('./auth/events')
+// const teamEvents = require('./team/events.js')
+// const authEvents = require('./auth/events')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
 $(() => {
+  loginEvents.addHandlers()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#Star LookApp').hide()
+  $('#Star-LookApp').hide()
   // auth.addHandlers()
 })

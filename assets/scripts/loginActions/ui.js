@@ -3,7 +3,7 @@ const store = require('./../store')
 
 const signUpSuccess = function (response) {
   $('#message').text('successfully signed up!')
-   console.log(response)
+  console.log(response)
 }
 
 const signUpFailure = function (error) {
@@ -42,11 +42,12 @@ const signOutSuccess = function (response) {
   $('#sign-in').show()
 
   console.log(response)
-
+}
 const signOutFailure = function (error) {
   $('#message').text('oops!!!  something went wrong')
   console.log(error)
 }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,

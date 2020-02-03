@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Star LookApp</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,75 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Star LookApp</h1>
+
+  <!-- <p> please sign up or sign in</p> -->
+  <!-- <p id="message"></p> -->
+
+    <form id='sign-up'>
+    <fieldset>
+      <legend>Sign Up</legend>
+      <input name='credentials[email]' type="email" placeholder='email'>
+      <input name='credentials[password]' type="password" placeholder='password' />
+      <input name='credentials[password_confirmation]' type="password" placeholder='password confirmation' />
+      <input type='submit' value='Sign Up!' />
+    </fieldset>
+  </form>
+
+
+  <form id='sign-in'>
+    <fieldset>
+      <legend>Sign In</legend>
+      <input name='credentials[email]' type="email" placeholder='email' />
+      <input name='credentials[password]' type="password" placeholder='password' />
+      <input type='submit' value='Sign In!' />
+    </fieldset>
+  </form>
+
+ <form id='change-password'>
+    <fieldset>
+      <legend>Change Password</legend>
+      <input name='password[old]' type="password" placeholder='old password' />
+      <input name='password[new]' type="password" placeholder='new password' />
+      <input type='submit' value='Change Password!' />
+    </fieldset>
+  </form>
+
+  <form id='sign-out'>
+     <fieldset>
+       <legend>Sign Out</legend>
+       <input type='submit' value='Sign Out!' />
+     </fieldset>
+   </form>
+
+      <nav class="navbar navbar-expand-lg">
+          <a href="" class="navbar-brand">star lookapp</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Watch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Download</a>
+          </li>
+        </ul>
+      </nav>
+      <nav>
+      <div class="star-lookapp">League</div>
+      <div class="nav-buttons">
+        <button id="getTeamsButton" class="btn btn-outline-info ">Get Teams!</button>
+        <button id="showTeamButton" class="btn btn-info mr-2">Show Teams!</button>
+        <button id="createTeamsButton" class="btn btn-outline-info">Create Teams!</button>
+        <button id="updateTeamsButton" class="btn btn-info mr-2">Update Teams!</button>
+        <button id="removeTeamsButton" class="btn btn-outline-info">Remove Teams!</button>
+      </div>
+    </nav>
+    <main>
+      <div class="content"></div>
+    </main>
+      </div>
+
     </body>
 </html>
