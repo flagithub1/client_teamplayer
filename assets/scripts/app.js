@@ -11,6 +11,6 @@ $(() => {
   loginEvents.addHandlers()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#Star-LookApp').hide()
+  $('section').hide()
   // auth.addHandlers()
 })

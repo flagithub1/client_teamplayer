@@ -17,7 +17,7 @@ const signInSuccess = function (response) {
   $('#sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
-
+  $('section').show()
   console.log('sign in success', response)
 }
 const signInFailure = function (error) {
