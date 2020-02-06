@@ -53,10 +53,9 @@
      </fieldset>
    </form>
    <section>
-   <div id='star-lookapp' class='placeholder'>
+   <div id='star-lookapp'>
 
-      <nav class="navbar navbar-expand-lg">
-          <a href="" class="navbar-brand">star lookapp</a>
+      <!-- <nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="">Chat</a>
@@ -68,15 +67,39 @@
             <a class="nav-link" href="">Download</a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
       <nav>
       <div class="star-lookapp"></div>
       <div class="nav-buttons">
+        <form id='create-team'>
+          <fieldset>
+            <legend>Create Team</legend>
+            <input name='team[name]' type="text" placeholder='Team Name'>
+            <input name='team[location]' type="text" placeholder='Team Location' />
+            <input name='team[slogan]' type="text" placeholder='Team Slogan' />
+            <input type='submit' value='Save Team!' />
+          </fieldset>
+        </form>
         <button id="getTeamsButton" class="btn btn-outline-info ">Get Teams!</button>
-        <button id="showTeamsButton" class="btn btn-info mr-2">Show Teams!</button>
-        <button id="createTeamsButton" class="btn btn-outline-info">Create Teams!</button>
-        <button id="updateTeamsButton" class="btn btn-info mr-2">Update Teams!</button>
-        <button id="removeTeamsButton" class="btn btn-outline-info">Remove Teams!</button>
+        <ul id="teams-list">
+        </ul>
+        <form id='update-team'>
+          <fieldset>
+            <legend>Update Team</legend>
+            <input name='team[id]' type="number" placeholder='Team ID'>
+            <input name='team[name]' type="text" placeholder='Team Name'>
+            <input name='team[location]' type="text" placeholder='Team Location' />
+            <input name='team[slogan]' type="text" placeholder='Team Slogan' />
+            <input type='submit' value='Update Team!' />
+          </fieldset>
+        </form>
+        <form id='delete-team'>
+          <fieldset>
+            <legend>Delete Team</legend>
+            <input name='team[id]' type="number" placeholder='Team ID'>
+            <input type='submit' value='Delete Team!' />
+          </fieldset>
+        </form>
       </div>
     </nav>
     <!-- <div id="funny-sports videos-carousel" class="carousel-slide" data-ride="false">

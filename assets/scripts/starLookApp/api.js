@@ -2,30 +2,26 @@
 const config = require('../config')
 const store = require('../store')
 
-const indexTeam = function (data) {
+const indexTeams = function () {
   return $.ajax({
-    url: config.apiUrl + '/indexTeam',
+    url: config.apiUrl + '/teams',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: data
+    }
   })
 }
 
-const showTeam = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/showTeam',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: data
-  })
-}
+// const showTeam = function () {
+//   return $.ajax({
+//     url: config.apiUrl + '/teams',
+//     method: 'GET',
+//     Authorization: 'Token token=' + store.user.token
+//   })
+// }
 const createTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/createTeam',
+    url: config.apiUrl + '/teams',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -35,7 +31,7 @@ const createTeam = function (data) {
 }
 const updateTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/updateTeam',
+    url: config.apiUrl + '/teams', // need ID
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -45,7 +41,7 @@ const updateTeam = function (data) {
 }
 const deleteTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/destroyTeam',
+    url: config.apiUrl + '/teams',
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -55,9 +51,8 @@ const deleteTeam = function (data) {
 }
 
 module.exports = {
-  indexTeam,
+  indexTeams,
   createTeam,
-  showTeam,
   updateTeam,
   deleteTeam
 }
