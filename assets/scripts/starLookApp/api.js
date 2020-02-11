@@ -31,7 +31,7 @@ const createTeam = function (data) {
 }
 const updateTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/teams', // need ID
+    url: config.apiUrl + '/teams/' + data.team.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -39,14 +39,14 @@ const updateTeam = function (data) {
     data: data
   })
 }
+
 const deleteTeam = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/teams',
+    url: config.apiUrl + '/teams/' + data.team.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: data
+    }
   })
 }
 

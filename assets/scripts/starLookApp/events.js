@@ -18,6 +18,23 @@ const onIndexTeams = function (event) {
     .then(ui.indexTeamSuccess)
     .catch(ui.indexTeamFailure)
 }
+const onUpdateTeam = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.updateTeam(data)
+    .then(ui.updateTeamSuccess)
+    .catch(ui.UpdateTeamFailure)
+}
+
+const onDeleteTeam = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.deleteTeam(data)
+    .then(ui.deleteTeamSuccess)
+    .catch(ui.deleteTeamFailure)
+}
 //
 // const onChangePassword = function (event) {
 //   event.preventDefault()
@@ -39,7 +56,9 @@ const onIndexTeams = function (event) {
 const addHandlers = function () {
   $('#create-team').on('submit', onCreateTeam)
   $('#getTeamsButton').on('click', onIndexTeams)
-  // $('#sign-in').on('submit', onSignIn)
+  $('#update-team').on('submit', onUpdateTeam)
+  $('#delete-team').on('submit', onDeleteTeam)
+
   // $('#change-password').on('submit', onChangePassword)
   // $('#sign-out').on('submit', onSignOut)
 }

@@ -22,9 +22,29 @@ const indexTeamSuccess = function (response) {
 const indexTeamFailure = function (response) {
   console.log('try again')
 }
+const updateTeamSuccess = function (response) {
+  console.log(response)
+  $('#message').text('Team successfully updated')
+  $('#update-team').trigger('reset')
+}
+const updateTeamFailure = function (response) {
+  console.log('try again')
+}
+const deleteTeamSuccess = function (response) {
+  console.log(response)
+}
+// $('#message').text('Team successfully deleted!')
+// // $('#delete-team').trigger('reset')
+const deleteTeamFailure = function (response) {
+  console.log('try again')
+}
 module.exports = {
   createTeamSuccess,
   createTeamFailure,
   indexTeamSuccess,
-  indexTeamFailure
+  indexTeamFailure,
+  updateTeamSuccess,
+  updateTeamFailure,
+  deleteTeamSuccess,
+  deleteTeamFailure
 }
