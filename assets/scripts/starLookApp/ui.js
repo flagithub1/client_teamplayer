@@ -26,17 +26,23 @@ const updateTeamSuccess = function (response) {
   console.log(response)
   $('#message').text('Team successfully updated')
   $('#update-team').trigger('reset')
+  $('#teams-list').html('')
 }
 const updateTeamFailure = function (response) {
   console.log('try again')
 }
 const deleteTeamSuccess = function (response) {
   console.log(response)
+  $('#delete-team').trigger('reset')
+  $('#message').text('Team successfully deleted')
+  $('#teams-list').html('')
 }
 // $('#message').text('Team successfully deleted!')
 // // $('#delete-team').trigger('reset')
 const deleteTeamFailure = function (response) {
   console.log('try again')
+  $('#delete-team').trigger('reset')
+  $('#message').text('Team not successfully deleted')
 }
 module.exports = {
   createTeamSuccess,
